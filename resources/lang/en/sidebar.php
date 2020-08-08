@@ -13,5 +13,7 @@ return [
     'transportation_module' => 'Transportation Module',
     'inventory_module' => 'Inventory Module',
     'setting_module' => 'Setting Module',
+    'setting_customer' => 'Customer',
+    'setting_container' => 'Container'
 
 ];

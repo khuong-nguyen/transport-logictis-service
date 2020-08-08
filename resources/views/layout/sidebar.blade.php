@@ -53,7 +53,8 @@
 
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
             <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">@lang('sidebar.transportation_module')</a>
-            <ul class="c-sidebar-nav-dropdown-items"></ul>
+            <ul class="c-sidebar-nav-dropdown-items">
+            </ul>
         </li>
 
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
@@ -63,7 +64,18 @@
 
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
             <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">@lang('sidebar.setting_module')</a>
-            <ul class="c-sidebar-nav-dropdown-items"></ul>
+            <ul class="c-sidebar-nav-dropdown-items">
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.setting_customer')</a>
+                </li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.setting_container')</a>
+                </li>
+            </ul>
         </li>
     </ul>
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
