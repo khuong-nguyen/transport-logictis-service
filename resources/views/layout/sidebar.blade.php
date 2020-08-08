@@ -9,46 +9,62 @@
     </div>
     <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="/">
+            <a class="c-sidebar-nav-link c-active" href="/">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="assets/icons/sprites/free.svg#cil-speedometer"></use>
                 </svg>@lang('sidebar.dashboard')
             </a>
         </li>
-        <li class="c-sidebar-nav-title">@lang('sidebar.booking_module')</li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
-                </svg>@lang('sidebar.request_order_registration')</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
-                </svg>@lang('sidebar.request_order_inquiry')</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
-                </svg>@lang('sidebar.virtual_booking_registration')</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
-                </svg>@lang('sidebar.virtual_booking_inquiry')</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
-                </svg>@lang('sidebar.booking_registration')</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-                <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
-                </svg>@lang('sidebar.booking_inquiry')</a></li>
+        <li class=" c-sidebar-nav-item c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#"> @lang('sidebar.booking_module')</a>
+            <ul class="c-sidebar-nav-dropdown-items">
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.request_order_registration')</a>
+                </li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.request_order_inquiry')</a>
+                </li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.virtual_booking_registration')</a>
+                </li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.virtual_booking_inquiry')</a>
+                </li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.booking_registration')</a>
+                </li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+                        <svg class="c-sidebar-nav-icon">
+                            <use xlink:href="assets/icons/sprites/free.svg#cil-book"></use>
+                        </svg>@lang('sidebar.booking_inquiry')</a>
+                </li>
+            </ul>
+        </li>
 
-        <li class="c-sidebar-nav-divider"></li>
-        <li class="c-sidebar-nav-title">@lang('sidebar.transportation_module')</li>
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">@lang('sidebar.transportation_module')</a>
+            <ul class="c-sidebar-nav-dropdown-items"></ul>
+        </li>
 
-        <li class="c-sidebar-nav-divider"></li>
-        <li class="c-sidebar-nav-title">@lang('sidebar.inventory_module')</li>
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">@lang('sidebar.inventory_module')</a>
+            <ul class="c-sidebar-nav-dropdown-items"></ul>
+        </li>
 
-        <li class="c-sidebar-nav-divider"></li>
-        <li class="c-sidebar-nav-title">@lang('sidebar.setting_module')</li>
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">@lang('sidebar.setting_module')</a>
+            <ul class="c-sidebar-nav-dropdown-items"></ul>
+        </li>
     </ul>
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
 </div>
