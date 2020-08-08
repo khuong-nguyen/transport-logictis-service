@@ -15,21 +15,21 @@ class CreateCustomerTable extends Migration
     {
         Schema::create('customer', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('customer_legal_english_name');
-            $table->string('customer_language_name')->nullable();
-            $table->string('customer_address')->nullable();
-            $table->string('customer_code')->unique();
-            $table->string('fax')->nullable();
-            $table->string('tel')->nullable();
-            $table->string('tax_code')->nullable();
-            $table->string('country_code');
-            $table->string('city');
-            $table->string('location_code');
-            $table->string('zip_code')->nullable();
-            $table->string('post_office_box')->nullable();
-            $table->string('sale_office_code');
-            $table->string('sale_rep_code');
-            $table->string('customer_type');
+            $table->string('customer_legal_english_name', 200);
+            $table->string('customer_language_name', 200)->nullable();
+            $table->string('customer_address', 300)->nullable();
+            $table->string('customer_code', 50)->unique();
+            $table->string('fax', 30)->nullable();
+            $table->string('tel', 30)->nullable();
+            $table->string('tax_code', 50)->nullable();
+            $table->string('country_code', 30);
+            $table->string('city', 30);
+            $table->string('location_code', 50);
+            $table->string('zip_code', 50)->nullable();
+            $table->string('post_office_box', 300)->nullable();
+            $table->string('sale_office_code', 50);
+            $table->string('sale_rep_code', 50);
+            $table->string('customer_type', 30);
             $table->timestamps();
         });
     }

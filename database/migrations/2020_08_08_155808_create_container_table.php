@@ -15,7 +15,7 @@ class CreateContainerTable extends Migration
     {
         Schema::create('container', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('container_code')->unique();
+            $table->string('container_code','30')->unique();
             $table->integer('container_size')->nullable();
             $table->timestamps();
         });

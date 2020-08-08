@@ -15,11 +15,11 @@ class CreateBookingDetailsTable extends Migration
     {
         Schema::create('booking_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('booking_id');
-            $table->string('container_id');
+            $table->foreignId('booking_id');
+            $table->foreignId('container_id');
             $table->integer('vol');
-            $table->integer('eq_sub');
-            $table->integer('soc');
+            $table->decimal('eq_sub');
+            $table->decimal('soc');
             $table->timestamps();
         });
     }

@@ -15,11 +15,11 @@ class CreateVirtualBookingDetailsTable extends Migration
     {
         Schema::create('virtual_booking_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('virtual_booking_id');
+            $table->foreignId('virtual_booking_id');
             $table->string('container_id');
             $table->integer('vol');
-            $table->integer('eq_sub');
-            $table->integer('soc');
+            $table->decimal('eq_sub');
+            $table->decimal('soc');
             $table->timestamps();
         });
     }
