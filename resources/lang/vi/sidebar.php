@@ -11,6 +11,7 @@ return [
     'booking_inquiry' => 'Booking Inquiry',
 
     'transportation_module' => 'Transportation Module',
+    'container_booking_registration' => 'Container Booking Registration',
     'inventory_module' => 'Inventory Module',
     'setting_module' => 'Setting Module',
     'setting_customer' => 'Customer',
