@@ -47,9 +47,13 @@ class CreateBookingTable extends Migration
             $table->string('bkg_contact_tel', 30)->nullable();
             $table->text('ext_remark')->nullable();
             $table->text('int_remark')->nullable();
+            $table->string('booking_status');
             $table->foreignId('shipper_id');
             $table->foreignId('forwarder_id');
             $table->foreignId('consignee_id');
+            $table->foreignId('created_by')->nullable();
+            $table->foreignId('updated_by')->nullable();
+            $table->foreignId('approved_by')->nullable();
             $table->timestamps();
         });
     }

@@ -17,6 +17,8 @@ class CreateContainerTable extends Migration
             $table->bigIncrements('id');
             $table->string('container_code','30')->unique();
             $table->integer('container_size')->nullable();
+            $table->foreignId('created_by')->nullable();
+            $table->foreignId('updated_by')->nullable();
             $table->timestamps();
         });
     }

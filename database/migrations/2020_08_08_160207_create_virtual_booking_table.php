@@ -49,6 +49,8 @@ class CreateVirtualBookingTable extends Migration
             $table->foreignId('shipper_id');
             $table->foreignId('forwarder_id');
             $table->foreignId('consignee_id');
+            $table->foreignId('created_by')->nullable();
+            $table->foreignId('updated_by')->nullable();
             $table->timestamps();
         });
     }

@@ -31,6 +31,8 @@ class CreateConsigneeBookingTable extends Migration
             $table->string('sale_office_code', 50);
             $table->string('sale_rep_code', 50);
             $table->string('customer_type', 30);
+            $table->foreignId('created_by')->nullable();
+            $table->foreignId('updated_by')->nullable();
             $table->timestamps();
         });
     }

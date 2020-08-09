@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookingDetailsTable extends Migration
+class CreateVirtualBookingContainerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateBookingDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('booking_details', function (Blueprint $table) {
+        Schema::create('virtual_booking_container', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('booking_id');
-            $table->foreignId('container_id');
+            $table->foreignId('virtual_booking_id');
+            $table->string('container_id');
             $table->integer('vol');
             $table->decimal('eq_sub');
             $table->decimal('soc');
+            $table->foreignId('created_by')->nullable();
+            $table->foreignId('updated_by')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateBookingDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('booking_details');
+        Schema::dropIfExists('virtual_booking_container');
     }
 }
