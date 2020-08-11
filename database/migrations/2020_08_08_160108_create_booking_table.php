@@ -16,7 +16,7 @@ class CreateBookingTable extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('booking_no', 100)->unique();
-            $table->foreignId('virtual_booking_id');
+            $table->foreignId('virtual_booking_id')->nullable();
             $table->string('tvvd', 50)->nullable();
             $table->string('por_1', 30);
             $table->string('por_2', 30)->nullable();
@@ -47,9 +47,9 @@ class CreateBookingTable extends Migration
             $table->string('bkg_contact_tel', 30)->nullable();
             $table->text('ext_remark')->nullable();
             $table->text('int_remark')->nullable();
-            $table->string('booking_status');
+            $table->string('booking_status')->default('ORDER'); //[ORDER,APPROVED]
             $table->foreignId('shipper_id');
-            $table->foreignId('forwarder_id');
+            $table->foreignId('forwarder_id')->nullable();
             $table->foreignId('consignee_id');
             $table->foreignId('created_by')->nullable();
             $table->foreignId('updated_by')->nullable();
